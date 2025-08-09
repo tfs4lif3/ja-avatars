@@ -67,7 +67,9 @@ export interface DefaultOptions {
   shirtStyle: ShirtStyle[],
   shirtColor: string[],
   bgColor: string[],
-  gradientBgColor: string[]
+  gradientBgColor: string[],
+  jobTitle: string[],
+  jobTitleAbv: string[]
 }
 
 export const defaultOptions: DefaultOptions = {
@@ -94,7 +96,9 @@ export const defaultOptions: DefaultOptions = {
     "linear-gradient(90deg, #ff5800 0%, #c80000 100%)",
     "linear-gradient(45deg, #ff5800 0%, #970032 100%)",
     "linear-gradient(45deg, #ff5800 0%, #890078 100%)"
-  ]
+  ],
+  jobTitle: ["Consultant", "CEO", "CTO", "Developer", "Designer", "Product Manager", "Marketing Specialist"],
+  jobTitleAbv: ["Con.", "CEO", "CTO", "Dev", "Designer", "Prod Mgr", "Market"]
 };
 
 const stringToHashCode = (str: string) : number => {

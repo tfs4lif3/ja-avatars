@@ -16,6 +16,7 @@ export type NoseStyle = 'short' | 'long' | 'round'
 export type MouthStyle = 'laugh' | 'smile' | 'peace' | 'frown' | 'surprised' | 'nervous' | 'pucker' | 'sad'
 export type ShirtStyle = 'hoody' | 'short' | 'polo'
 export type EyeBrowStyle = 'up' | 'upWoman' | 'down' | 'downWoman'
+export type JobTitle = 'ceo' | 'cto' | 'developer' | 'designer' | 'productManager' | 'marketingSpecialist' | 'consultant'
 
 export interface AvatarConfig {
   sex?: Sex,
@@ -33,7 +34,8 @@ export interface AvatarConfig {
   shirtStyle?: ShirtStyle,
   shirtColor?: string,
   bgColor?: string,
-  isGradient?: boolean
+  isGradient?: boolean,
+  jobTitle?: JobTitle
 }
 
 export interface AvatarFullConfig extends AvatarConfig {

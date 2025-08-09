@@ -7,12 +7,14 @@ import EyeBrow from "../eyebrow/index";
 import Nose from "../nose/index";
 import Mouth from "../mouth/index";
 import Shirt from "../shirt/index";
+import JobTitle from "../jobtitle/index";
 import ColorPicker from "../colorpicker/index";
 import SectionWrapper from "./SectionWrapper/index";
 
 import { AvatarFullConfig, HairStyleMan, HairStyleWoman } from "../types";
 
 import "./index.scss";
+import jobtitle from "../jobtitle/index";
 
 interface AvatarEditorProps {
   config: AvatarFullConfig;
@@ -40,6 +42,7 @@ const genDefaultOptions = (opts: DefaultOptions) => {
     hairStyle: Array.from(hairSet),
     eyeBrowStyle: opts.eyeBrowWoman,
     bgColor: opts.bgColor.concat(opts.gradientBgColor),
+    jobtitle: "Consultant"
   };
 };
 
@@ -182,7 +185,15 @@ const AvatarEditor = ({
             className={"w-full h-full bg-white rounded-full"}
             style={{ background: config.bgColor }}
           />
-        </SectionWrapper>        
+        </SectionWrapper>
+        {/* Job Title */}
+        <SectionWrapper
+          className="w-16 h-16 rounded-full p-2 mx-2"
+          tip="Job Title"
+          switchConfig={() => switchConfig("jobTitle", config.jobTitle)}
+        >
+          <JobTitle style={config.jobTitle!} color="#ffffff" />
+        </SectionWrapper>
       </div>
     </div>
   );

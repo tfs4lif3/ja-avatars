@@ -1,0 +1,24 @@
+{
+    "steps": [
+        {
+            "type": "video",
+            "value": "intro.mp4"
+        },
+        {
+            "type": "question",
+            "value": "1"
+        },
+        {
+            "type": "video",
+            "value": "intro.mp4"
+        },
+        {
+            "type": "question",
+            "value": "2"
+        },
+        {
+            "type": "video",
+            "value": "intro.mp4"
+        }
+    ]
+}

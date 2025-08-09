@@ -1,6 +1,7 @@
 import ReactNiceAvatar from "../index";
 import AvatarEditor from "../AvatarEditor/index";
 import { AvatarFullConfig, NiceAvatarProps } from "../types";
+import {defaultOptions} from "../utils"; 
 
 const PageTwo = ({
   state,
@@ -33,18 +34,22 @@ const PageTwo = ({
             shape={state.shape}
           />
         </div>
-        <div className="mb-10 flex flex-col items-center">
+        <div className="mb-1 flex flex-col items-center">
           <input
             className={`bg-white/70 w-96 h-10 p-2 mb-1 text-center z-50 text-black placeholder-gray-900 rounded ${
               nameError ? "border-2 border-red-700" : ""
             }`}
             placeholder="Enter name here"
+            maxLength={18}
             onChange={onInputChange}
             value={state.name}
           />
           {nameError && (
             <span className="text-red-700">Please enter your name.</span>
           )}
+        </div>
+        <div className="mb-1 text-3xl">
+          <strong className="color: black">{state.config.jobTitle ? state.config.jobTitle : defaultOptions.jobTitle[0]}</strong>
         </div>
         <AvatarEditor config={state.config} updateConfig={updateConfig} />
         <button

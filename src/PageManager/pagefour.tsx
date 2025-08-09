@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import "./index.css";
 import { AvatarFullConfig, NiceAvatarProps } from "../types";
 import ReactNiceAvatar from "../index.tsx";
+import {defaultOptions} from "../utils"; 
 
 const PageFour = ({ state, setPage, print }: PageFourProps) => {
   useEffect(() => {
@@ -27,13 +28,7 @@ const PageFour = ({ state, setPage, print }: PageFourProps) => {
         }}
       >
         <tbody>
-          <tr
-            style={{
-              overflow: "hidden",
-              pageBreakInside: "avoid",
-              height: "167.75pt",
-            }}
-          >
+          <tr style={{ overflow: "hidden", pageBreakInside: "avoid", height: "167.75pt", }}>
             <td
               width="324"
               valign="top"
@@ -45,18 +40,23 @@ const PageFour = ({ state, setPage, print }: PageFourProps) => {
               }}
             >
               <div className="badge-horizontal h-[224px] rounded-lg w-[327px] flex items-center">
+                <img src="./ja biztown small.png" className="z-20 badge-upper-logo-left-horizontal -rotate-90" />
+                <img src="./Avanade Logo RGB small.png" className="z-20 badge-upper-logo-right-horizontal -rotate-90" />
                 <div className="z-10">
                   <ReactNiceAvatar
-                    className="w-40 h-40 -rotate-90 ml-16"
+                    className="w-40 h-40 -rotate-90 avatar-horizontal"
                     {...state.config}
                     hairColorRandom={true}
                     shape={state.shape}
                   />
                 </div>
-                <div className="text-black text-2xl text-center ml-6 z-20 write-vertical rotate-180">
+                <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 name-horizontal">
                   {state.name}
                 </div>
-                <div className="text-black text-2xl text-center ml-2 z-20 write-vertical rotate-180">
+                <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 job-title-horizontal">
+                  {state.config.jobTitle ? state.config.jobTitle : defaultOptions.jobTitle[0]}
+                </div>
+                <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 avanade-avatar-horizontal">
                   Avanade Avatar
                 </div>
               </div>
@@ -95,18 +95,23 @@ const PageFour = ({ state, setPage, print }: PageFourProps) => {
               }}
             >
               <div className="badge-horizontal h-[224px] rounded-lg w-[327px] flex items-center">
+                <img src="./ja biztown small.png" className="z-20 badge-upper-logo-left-horizontal -rotate-90" />
+                <img src="./Avanade Logo RGB small.png" className="z-20 badge-upper-logo-right-horizontal -rotate-90" />
                 <div className="z-10">
                   <ReactNiceAvatar
-                    className="w-40 h-40 -rotate-90 ml-16"
+                    className="w-40 h-40 -rotate-90 avatar-horizontal"
                     {...state.config}
                     hairColorRandom={true}
                     shape={state.shape}
                   />
                 </div>
-                <div className="text-black text-2xl text-center ml-6 z-20 write-vertical rotate-180">
+                <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 name-horizontal">
                   {state.name}
                 </div>
-                <div className="text-black text-2xl text-center ml-2 z-20 write-vertical rotate-180">
+                <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 job-title-horizontal">
+                  {state.config.jobTitle ? state.config.jobTitle : defaultOptions.jobTitle[0]}
+                </div>
+                <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 avanade-avatar-horizontal">
                   Avanade Avatar
                 </div>
               </div>
@@ -207,18 +212,23 @@ const PageFour = ({ state, setPage, print }: PageFourProps) => {
                   }}
                 >
                   <div className="badge-horizontal h-[224px] rounded-lg w-[327px] flex items-center">
+                    <img src="./ja biztown small.png" className="z-20 badge-upper-logo-left-horizontal -rotate-90" />
+                    <img src="./Avanade Logo RGB small.png" className="z-20 badge-upper-logo-right-horizontal -rotate-90" />
                     <div className="z-10">
                       <ReactNiceAvatar
-                        className="w-40 h-40 -rotate-90 ml-16"
+                        className="w-40 h-40 -rotate-90 avatar-horizontal"
                         {...state.config}
                         hairColorRandom={true}
                         shape={state.shape}
                       />
                     </div>
-                    <div className="text-black text-2xl text-center ml-6 z-20 write-vertical rotate-180">
+                    <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 name-horizontal">
                       {state.name}
                     </div>
-                    <div className="text-black text-2xl text-center ml-2 z-20 write-vertical rotate-180">
+                    <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 job-title-horizontal">
+                      {state.config.jobTitle ? state.config.jobTitle : defaultOptions.jobTitle[0]}
+                    </div>
+                    <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 avanade-avatar-horizontal">
                       Avanade Avatar
                     </div>
                   </div>
@@ -256,18 +266,23 @@ const PageFour = ({ state, setPage, print }: PageFourProps) => {
                   }}
                 >
                   <div className="badge-horizontal h-[224px] rounded-lg w-[327px] flex items-center">
+                    <img src="./ja biztown small.png" className="z-20 badge-upper-logo-left-horizontal -rotate-90" />
+                    <img src="./Avanade Logo RGB small.png" className="z-20 badge-upper-logo-right-horizontal -rotate-90" />
                     <div className="z-10">
                       <ReactNiceAvatar
-                        className="w-40 h-40 -rotate-90 ml-16"
+                        className="w-40 h-40 -rotate-90 avatar-horizontal"
                         {...state.config}
                         hairColorRandom={true}
                         shape={state.shape}
                       />
                     </div>
-                    <div className="text-black text-2xl text-center ml-6 z-20 write-vertical rotate-180">
+                    <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 name-horizontal">
                       {state.name}
                     </div>
-                    <div className="text-black text-2xl text-center ml-2 z-20 write-vertical rotate-180">
+                    <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 job-title-horizontal">
+                      {state.config.jobTitle ? state.config.jobTitle : defaultOptions.jobTitle[0]}
+                    </div>
+                    <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 avanade-avatar-horizontal">
                       Avanade Avatar
                     </div>
                   </div>

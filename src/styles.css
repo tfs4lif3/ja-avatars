@@ -607,6 +607,10 @@ video {
   margin-bottom: 0.25rem;
 }
 
+.mb-2 {
+  margin-bottom: 1rem;
+}
+
 .mb-10 {
   margin-bottom: 2.5rem;
 }
@@ -724,6 +728,10 @@ video {
   width: 24rem;
 }
 
+.w-192 {
+  width: 42rem;
+}
+
 .w-\[224px\] {
   width: 224px;
 }
@@ -838,6 +846,24 @@ video {
 .border-sky-100 {
   --tw-border-opacity: 1;
   border-color: rgb(224 242 254 / var(--tw-border-opacity));
+}
+
+.border-black-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 0 0 / var(--tw-border-opacity));
+  border-width: 2px;
+}
+
+.border-green-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(0 255 0 / var(--tw-border-opacity));
+  border-width: 4px;
+}
+
+.border-red-100 {
+  --tw-border-opacity: 1;
+  border-color: rgb(255 0 0 / var(--tw-border-opacity));
+  border-width: 4px;
 }
 
 .bg-\[\#A13368\] {
@@ -1024,19 +1050,65 @@ video {
   }
 }
 
+.avatar-horizontal {
+  left: -5rem;
+  position: relative;
+}
+
+.name-horizontal {
+  left: -5rem;
+  position: relative;
+  white-space: nowrap;
+}
+
+.job-title-horizontal {
+  left: -5rem;
+  position: relative;
+}
+
+.avanade-avatar-horizontal {
+  left: -5rem;
+  position: relative;
+  white-space: nowrap;
+}
+
 .badge {
   position: relative;
   margin: 0;
   overflow: hidden;
 }
 
+.badge-upper-logo-left {
+  position: relative;
+  left: -3.5rem;
+  top: 0.25rem;
+}
+
+.badge-upper-logo-left-horizontal {
+  position: relative;
+  left: -0.25rem;
+  top: 3.5rem;
+}
+
+.badge-upper-logo-right {
+  position: relative;
+  left: 3.5rem;
+  top: -1rem;
+}
+
+.badge-upper-logo-right-horizontal {
+  position: relative;
+  left: -4.5rem;
+  top: -3rem;
+}
+
 .badge::after {
   content: "";
-  position: absolute;
+  /*position: absolute;
   border-radius: 8px;
   top: 16px;
   width: 64px;
-  height: 20px;
+  height: 20px;*/
   box-shadow: 0px 0px 0px 2000px #dddddd;
 }
 
@@ -1048,11 +1120,11 @@ video {
 
 .badge-horizontal::after {
   content: "";
-  position: absolute;
+  /*position: absolute;
   border-radius: 8px;
   left: 16px;
   height: 64px;
-  width: 20px;
+  width: 20px;*/
   box-shadow: 0px 0px 0px 2000px #ffffff;
 }
 
