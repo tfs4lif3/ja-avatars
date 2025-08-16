@@ -14,7 +14,6 @@ import SectionWrapper from "./SectionWrapper/index";
 import { AvatarFullConfig, HairStyleMan, HairStyleWoman } from "../types";
 
 import "./index.scss";
-import jobtitle from "../jobtitle/index";
 
 interface AvatarEditorProps {
   config: AvatarFullConfig;
@@ -192,7 +191,7 @@ const AvatarEditor = ({
           tip="Job Title"
           switchConfig={() => switchConfig("jobTitle", config.jobTitle)}
         >
-          <JobTitle style={config.jobTitle!} color="#ffffff" />
+          <JobTitle style={config.jobTitle! } />
         </SectionWrapper>
       </div>
     </div>

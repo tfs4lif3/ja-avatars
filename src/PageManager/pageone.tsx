@@ -3,7 +3,6 @@ import intro from "../../config/intro.json";
 import quiz_questions from "../../config/quiz_questions.json";
 
 const PageOne = ({ setPage }: PageOneProps) => {
-  const [ended, setEnded] = useState(false);
   const [currentStepIndex, setCurrentStepIndex] = useState(0);
   const [selectedOption, setSelectedOption] = useState<number | null>(null);
 
