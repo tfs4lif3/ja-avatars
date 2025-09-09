@@ -185,14 +185,6 @@ const AvatarEditor = ({
             style={{ background: config.bgColor }}
           />
         </SectionWrapper>
-        {/* Job Title */}
-        <SectionWrapper
-          className="w-16 h-16 rounded-full p-2 mx-2"
-          tip="Job Title"
-          switchConfig={() => switchConfig("jobTitle", config.jobTitle)}
-        >
-          <JobTitle style={config.jobTitle! } />
-        </SectionWrapper>
       </div>
     </div>
   );

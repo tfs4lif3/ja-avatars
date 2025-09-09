@@ -1051,18 +1051,17 @@ video {
 }
 
 .avatar-horizontal {
-  left: -5rem;
+  left: -5.5rem;
   position: relative;
 }
 
 .name-horizontal {
-  left: -5rem;
+  left: -5.75rem;
   position: relative;
-  white-space: nowrap;
 }
 
 .job-title-horizontal {
-  left: -5rem;
+  left: -5.9rem;
   position: relative;
 }
 

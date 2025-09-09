@@ -11,6 +11,7 @@ import PageFour from "./pagefour";
 const PageManager = (): JSX.Element => {
   const [page, setCurrentPage] = useState(1);
   const [nameError, setNameError] = useState(false);
+  const [jobTitleError, setJobTitleError] = useState(false);
   const [state, setState] = useState({
     config: genConfig({
       isGradient: Boolean(Math.round(Math.random())),
@@ -18,6 +19,7 @@ const PageManager = (): JSX.Element => {
     }),
     shape: "circle" as NiceAvatarProps["shape"],
     name: "",
+    jobTitle: ""
   });
 
   const avatarId = "myAvatar";
@@ -25,6 +27,11 @@ const PageManager = (): JSX.Element => {
   const onInputChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
     setState((prevState) => ({ ...prevState, name: e.target.value }));
     setNameError(false);
+  }, []);
+
+  const onJobTitleInputChange = useCallback((e: ChangeEvent<HTMLInputElement>) => {
+    setState((prevState) => ({ ...prevState, jobTitle: e.target.value }));
+    setJobTitleError(false);
   }, []);
 
   const updateConfig = useCallback(
@@ -76,7 +83,10 @@ const PageManager = (): JSX.Element => {
           setNameError={setNameError}
           onInputChange={onInputChange}
           updateConfig={updateConfig}
-          setPage={setCurrentPage}
+          setPage={setCurrentPage} 
+          jobTitleError={jobTitleError}
+          setJobTitleError={setJobTitleError}
+          onJobTitleInputChange={onJobTitleInputChange}
         />
       );
     case 3:

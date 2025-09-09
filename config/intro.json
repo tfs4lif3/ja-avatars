@@ -2,7 +2,7 @@
     "steps": [
         {
             "type": "video",
-            "value": "intro.mp4"
+            "value": "01.mp4"
         },
         {
             "type": "question",
@@ -10,7 +10,7 @@
         },
         {
             "type": "video",
-            "value": "intro.mp4"
+            "value": "02.mp4"
         },
         {
             "type": "question",
@@ -18,7 +18,7 @@
         },
         {
             "type": "video",
-            "value": "intro.mp4"
+            "value": "03.mp4"
         }
     ]
 }

@@ -2,7 +2,6 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { AvatarFullConfig, NiceAvatarProps } from "../types";
 import { faPrint } from "@fortawesome/free-solid-svg-icons";
 import ReactNiceAvatar from "../index";
-import {defaultOptions} from "../utils"; 
 
 const PageThree = ({ avatarId, state, setPage }: PageThreeProps) => {
   const print = () => {
@@ -21,20 +20,17 @@ const PageThree = ({ avatarId, state, setPage }: PageThreeProps) => {
             <img src="./Avanade Logo RGB small.png" className="z-20 badge-upper-logo-right" />
             <div className="z-10">
               <ReactNiceAvatar
-                className="w-40 h-40 mt-2"
+                className="w-40 h-40"
                 {...state.config}
                 hairColorRandom={true}
                 shape={state.shape}
               />
             </div>
-            <div className="text-black text-2xl text-center z-20">
+            <div className="text-black text-2xl text-center z-20 ml-2" style={{ marginRight: '0.5rem' }}>
               {state.name}
             </div>            
-            <div className="text-black text-2xl text-center z-20">
-              {state.config.jobTitle ? state.config.jobTitle : defaultOptions.jobTitle[0]}
-            </div>
-            <div className="text-black text-2xl text-center mt-2 z-20">
-              Avanade Avatar
+            <div className="text-black text-xl text-center z-20 ml-2" style={{ marginRight: '0.5rem' }}>
+              {state.jobTitle}
             </div>
           </div>
         </div>
@@ -61,6 +57,7 @@ interface PageThreeProps {
     config: AvatarFullConfig;
     shape: NiceAvatarProps["shape"];
     name: string;
+    jobTitle: string;
   };
   setPage: React.Dispatch<React.SetStateAction<number>>;
 }

@@ -2,7 +2,6 @@ import React, { useEffect } from "react";
 import "./index.css";
 import { AvatarFullConfig, NiceAvatarProps } from "../types";
 import ReactNiceAvatar from "../index.tsx";
-import {defaultOptions} from "../utils"; 
 
 const PageFour = ({ state, setPage, print }: PageFourProps) => {
   useEffect(() => {
@@ -53,11 +52,8 @@ const PageFour = ({ state, setPage, print }: PageFourProps) => {
                 <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 name-horizontal">
                   {state.name}
                 </div>
-                <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 job-title-horizontal">
-                  {state.config.jobTitle ? state.config.jobTitle : defaultOptions.jobTitle[0]}
-                </div>
-                <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 avanade-avatar-horizontal">
-                  Avanade Avatar
+                <div className="text-black text-xl text-center z-20 write-vertical rotate-180 job-title-horizontal">
+                  {state.jobTitle}
                 </div>
               </div>
             </td>
@@ -108,11 +104,8 @@ const PageFour = ({ state, setPage, print }: PageFourProps) => {
                 <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 name-horizontal">
                   {state.name}
                 </div>
-                <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 job-title-horizontal">
-                  {state.config.jobTitle ? state.config.jobTitle : defaultOptions.jobTitle[0]}
-                </div>
-                <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 avanade-avatar-horizontal">
-                  Avanade Avatar
+                <div className="text-black text-xl text-center z-20 write-vertical rotate-180 job-title-horizontal">
+                  {state.jobTitle}
                 </div>
               </div>
             </td>
@@ -225,11 +218,8 @@ const PageFour = ({ state, setPage, print }: PageFourProps) => {
                     <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 name-horizontal">
                       {state.name}
                     </div>
-                    <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 job-title-horizontal">
-                      {state.config.jobTitle ? state.config.jobTitle : defaultOptions.jobTitle[0]}
-                    </div>
-                    <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 avanade-avatar-horizontal">
-                      Avanade Avatar
+                    <div className="text-black text-xl text-center z-20 write-vertical rotate-180 job-title-horizontal">
+                      {state.jobTitle}
                     </div>
                   </div>
                 </td>
@@ -279,11 +269,8 @@ const PageFour = ({ state, setPage, print }: PageFourProps) => {
                     <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 name-horizontal">
                       {state.name}
                     </div>
-                    <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 job-title-horizontal">
-                      {state.config.jobTitle ? state.config.jobTitle : defaultOptions.jobTitle[0]}
-                    </div>
-                    <div className="text-black text-2xl text-center z-20 write-vertical rotate-180 avanade-avatar-horizontal">
-                      Avanade Avatar
+                    <div className="text-black text-xl text-center z-20 write-vertical rotate-180 job-title-horizontal">
+                      {state.jobTitle}
                     </div>
                   </div>
                 </td>
@@ -314,6 +301,7 @@ interface PageFourProps {
     config: AvatarFullConfig;
     shape: NiceAvatarProps["shape"];
     name: string;
+    jobTitle: string;
   };
   setPage: React.Dispatch<React.SetStateAction<number>>;
   print: () => void;

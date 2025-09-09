@@ -10,10 +10,21 @@ const PageTwo = ({
   onInputChange,
   updateConfig,
   setPage,
+  jobTitleError,
+  setJobTitleError,
+  onJobTitleInputChange
 }: PageTwoProps) => {
   const nextPage = () => {
-    if (!state.name) {
+    let hasErrors = false;
+    if (!state.name || state.name.trim() === "") {
       setNameError(true);
+      hasErrors = true;
+    }
+    if (!state.jobTitle || state.jobTitle.trim() === "") {
+      setJobTitleError(true);
+      hasErrors = true;
+    }
+    if (hasErrors === true) {
       return;
     }
     setPage(3);
@@ -40,7 +51,7 @@ const PageTwo = ({
               nameError ? "border-2 border-red-700" : ""
             }`}
             placeholder="Enter name here"
-            maxLength={18}
+            maxLength={35}
             onChange={onInputChange}
             value={state.name}
           />
@@ -48,8 +59,18 @@ const PageTwo = ({
             <span className="text-red-700">Please enter your name.</span>
           )}
         </div>
-        <div className="mb-1 text-3xl">
-          <strong className="color: black">{state.config.jobTitle ? state.config.jobTitle : defaultOptions.jobTitle[0]}</strong>
+        <div className="mb-1 flex flex-col items-center">
+            <input
+            className={`bg-white/70 w-96 h-10 p-2 mb-1 text-center z-50 text-black placeholder-gray-900 rounded 
+              ${jobTitleError ? "border-2 border-red-700" : "" }`}
+            placeholder="Enter job title here"
+            maxLength={42}
+            onChange={onJobTitleInputChange}
+            value={state.jobTitle}
+          />
+          {jobTitleError && (
+            <span className="text-red-700">Please enter your job title.</span>
+          )}
         </div>
         <AvatarEditor config={state.config} updateConfig={updateConfig} />
         <button
@@ -73,10 +94,14 @@ interface PageTwoProps {
     config: AvatarFullConfig;
     shape: NiceAvatarProps["shape"];
     name: string;
+    jobTitle: string;
   };
   nameError: boolean;
+  jobTitleError: boolean;
   setNameError: React.Dispatch<React.SetStateAction<boolean>>;
   onInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
+  setJobTitleError: React.Dispatch<React.SetStateAction<boolean>>;
+  onJobTitleInputChange: (e: React.ChangeEvent<HTMLInputElement>) => void;
   updateConfig: (
     key: string | number,
     value: string | number | boolean
