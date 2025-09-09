@@ -7,7 +7,6 @@ import EyeBrow from "../eyebrow/index";
 import Nose from "../nose/index";
 import Mouth from "../mouth/index";
 import Shirt from "../shirt/index";
-import JobTitle from "../jobtitle/index";
 import ColorPicker from "../colorpicker/index";
 import SectionWrapper from "./SectionWrapper/index";
 

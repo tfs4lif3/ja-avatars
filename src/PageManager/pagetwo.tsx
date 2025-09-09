@@ -1,7 +1,6 @@
 import ReactNiceAvatar from "../index";
 import AvatarEditor from "../AvatarEditor/index";
 import { AvatarFullConfig, NiceAvatarProps } from "../types";
-import {defaultOptions} from "../utils"; 
 
 const PageTwo = ({
   state,
