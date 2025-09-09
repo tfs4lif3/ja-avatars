@@ -26,10 +26,10 @@ const PageThree = ({ avatarId, state, setPage }: PageThreeProps) => {
                 shape={state.shape}
               />
             </div>
-            <div className="text-black text-2xl text-center z-20 ml-2" style={{ marginRight: '0.5rem' }}>
+            <div className="text-black text-2xl text-center z-20" style={{ marginRight: '0.25rem', marginLeft: '0.25rem' }}>
               {state.name}
             </div>            
-            <div className="text-black text-xl text-center z-20 ml-2" style={{ marginRight: '0.5rem' }}>
+            <div className="text-black text-xl text-center z-20" style={{ marginRight: '0.25rem', marginLeft: '0.25rem' }}>
               {state.jobTitle}
             </div>
           </div>

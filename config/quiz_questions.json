@@ -2,15 +2,15 @@
     "questions": [
         {
             "id": "1",
-            "question": "How does Avanade help our customers?",
-            "options": ["Avanade helps companies identify puzzle pieces and build solutions​", "Some answer that isn’t as good​"],
-            "answer": "Avanade helps companies identify puzzle pieces and build solutions​"
+            "question": "How Does Avanade help our customers?",
+            "options": ["Avanade helps companies identify puzzle pieces and build solutions", "Avanade makes puzzles for them"],
+            "answer": "Avanade helps companies identify puzzle pieces and build solutions"
         },
         {
             "id": "2",
-            "question": "How does Avanade use avatars?​",
-            "options": ["Avanade uses avatars as representatives of ourselves with our customers​", "Some answer that isn’t as good​"],
-            "answer": "Avanade uses avatars as representatives of ourselves with our customers​"
+            "question": "How Does Avanade use avatars?​",
+            "options": ["Avanade uses avatars as representatives of ourselves with our customers", "Avanade uses avatars to play games"],
+            "answer": "Avanade uses avatars as representatives of ourselves with our customers"
         }
     ]
 }
