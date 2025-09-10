@@ -63,7 +63,7 @@ const PageTwo = ({
             className={`bg-white/70 w-96 h-10 p-2 mb-1 text-center z-50 text-black placeholder-gray-900 rounded 
               ${jobTitleError ? "border-2 border-red-700" : "" }`}
             placeholder="Enter job title here"
-            maxLength={42}
+            maxLength={40}
             onChange={onJobTitleInputChange}
             value={state.jobTitle}
           />
